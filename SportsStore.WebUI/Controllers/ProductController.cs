@@ -20,5 +20,12 @@ namespace SportsStore.WebUI.Controllers
         {
             return View(repository.Products);
         }
+
+        //public ActionResult Index()
+        //{
+        //    return View();
+        //}
+
+
     }
 }
