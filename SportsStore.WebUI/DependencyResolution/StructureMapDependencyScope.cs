@@ -48,17 +48,17 @@ namespace SportsStore.WebUI.DependencyResolution {
             AddBindings(container);
         }
 
-        private void AddBindings(IContainer container)
-        {
-            Mock<IProductRepository> mock = new Mock<IProductRepository>();
-            mock.Setup(m => m.Products).Returns(new List<Product>
-            {
-                new Product { Name = "Football", Price = 25 },
-                new Product { Name = "Surf board", Price = 179 },
-                new Product { Name = "Running shoes", Price = 95 }
-            });
-            container.Inject<IProductRepository>(mock.Object);
-        }
+        //private void AddBindings(IContainer container)
+        //{
+        //    Mock<IProductRepository> mock = new Mock<IProductRepository>();
+        //    mock.Setup(m => m.Products).Returns(new List<Product>
+        //    {
+        //        new Product { Name = "Football", Price = 25 },
+        //        new Product { Name = "Surf board", Price = 179 },
+        //        new Product { Name = "Running shoes", Price = 95 }
+        //    });
+        //    container.Inject<IProductRepository>(mock.Object);
+        //}
 
         #endregion
 
