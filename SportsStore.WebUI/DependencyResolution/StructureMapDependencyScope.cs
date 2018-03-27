@@ -45,7 +45,7 @@ namespace SportsStore.WebUI.DependencyResolution {
                 throw new ArgumentNullException("container");
             }
             Container = container;
-            AddBindings(container);
+            //AddBindings(container);
         }
 
         //private void AddBindings(IContainer container)
