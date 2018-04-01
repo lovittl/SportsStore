@@ -16,7 +16,8 @@ namespace SportsStore.WebUI
             routes.MapRoute(
                 name: null,
                 url: "Page{page}",
-                defaults: new { Controller = "Product", action = "List", id = UrlParameter.Optional });
+                defaults: new { Controller = "Product", action = "List" }
+            );
 
             routes.MapRoute(
                 name: "Default",
