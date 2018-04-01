@@ -10,6 +10,7 @@ using SportsStore.WebUI.Controllers;
 using System.Web.Mvc;
 using SportsStore.WebUI.Models;
 using SportsStore.WebUI.HtmlHelpers;
+
 namespace SportsStore.UnitTests
 {
     [TestClass]
@@ -31,7 +32,7 @@ namespace SportsStore.UnitTests
             ProductController controller = new ProductController(mock.Object);
             controller.PageSize = 3;
             // Act
-            ProductsListViewModel result = (ProductsListViewModel)Controller.List(2).Model;
+            ProductsListViewModel result = (ProductsListViewModel)controller.List(2).Model;
             //IEnumerable<Product> result = (IEnumerable<Product>)controller.List(2).Model;
             // Assert
             Product[] prodArray = result.Products.ToArray();
@@ -64,6 +65,7 @@ namespace SportsStore.UnitTests
                                 + @"<a class=""btn btn-default"" href=""Page3"">3</a>",
                 result.ToString());
         }
+
         [TestMethod]
         public void Can_Send_Pagination_View_Model()
         {    // Arrange

@@ -11,7 +11,6 @@ using SportsStore.Domain.Concrete;
 namespace SportsStore.WebUI.Infrastructure
 {
     public class NinjectDependencyResolver : IDependencyResolver
-
     {
         private IKernel kernel;
         public NinjectDependencyResolver(IKernel kernelParam)
