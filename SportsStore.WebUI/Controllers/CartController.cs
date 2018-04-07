@@ -32,7 +32,7 @@ namespace SportsStore.WebUI.Controllers
 
             if (product != null)
             {
-                cart.RemoveLine(product); 
+                cart.AddItem(product, 1); 
             }
             return RedirectToAction("Index", new { returnUrl });
         }
@@ -49,16 +49,16 @@ namespace SportsStore.WebUI.Controllers
             return RedirectToAction("Index", new { returnUrl });
         }
 
-        private Cart GetCart()
-        {
+        //private Cart GetCart()
+        //{
 
-            Cart cart = (Cart)Session["Cart"];
-            if (cart == null)
-            {
-                cart = new Cart();
-                Session["Cart"] = cart;
-            }
-            return cart;
-        }
+        //    Cart cart = (Cart)Session["Cart"];
+        //    if (cart == null)
+        //    {
+        //        cart = new Cart();
+        //        Session["Cart"] = cart;
+        //    }
+        //    return cart;
+        //}
     }
 }
