@@ -2,7 +2,7 @@
 
 namespace SportsStore.Domain.Entities
 {
-    class ShiippingDetails
+    public class ShippingDetails
     {
         [Required(ErrorMessage = "Please enter a name")]
         public string Name { get; set; }

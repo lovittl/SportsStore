@@ -54,16 +54,10 @@ namespace SportsStore.WebUI.Controllers
             return PartialView(cart);
         }
 
-        //private Cart GetCart()
-        //{
+        public ViewResult Checkout()
+        {
+            return View(new ShippingDetails());
+        }
 
-        //    Cart cart = (Cart)Session["Cart"];
-        //    if (cart == null)
-        //    {
-        //        cart = new Cart();
-        //        Session["Cart"] = cart;
-        //    }
-        //    return cart;
-        //}
     }
 }
