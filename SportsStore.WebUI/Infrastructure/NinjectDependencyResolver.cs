@@ -42,6 +42,8 @@ namespace SportsStore.WebUI.Infrastructure
                         .AppSettings["Email.WriteAsFile"] ?? "false")
             };
 
+            // IViewDataContainer.Inject<EmailSettings>(emailSettings);
+
             kernel.Bind<IOrderProcessor>().To<EmailOrderProcessor>()
                 .WithConstructorArgument("settings", emailSettings);
         }
