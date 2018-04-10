@@ -139,7 +139,7 @@ namespace SportsStore.UnitTests
             // Arrange - create a Cart
             Cart cart = new Cart();
             // Arrange - create the controller
-            CartController target = new CartController(mock.Object);
+            CartController target = new CartController(mock.Object, null);
             // Act - add a product to the cart
             target.AddToCart(cart, 1, null);
             // Assert
@@ -159,7 +159,7 @@ namespace SportsStore.UnitTests
             // Arrange - create a Cart
             Cart cart = new Cart();
             // Arrange - create the controller
-            CartController target = new CartController(mock.Object);
+            CartController target = new CartController(mock.Object, null);
             // Act - add a product to the cart
             RedirectToRouteResult result = target.AddToCart(cart, 2, "myUrl");
             // Assert
@@ -172,7 +172,7 @@ namespace SportsStore.UnitTests
             // Arrange - create a Cart
             Cart cart = new Cart();
             // Arrange - create the controller
-            CartController target = new CartController(null);
+            CartController target = new CartController(null, null);
             // Act - call the Index action method
             CartIndexViewModel result
                 = (CartIndexViewModel)target.Index(cart, "myUrl").ViewData.Model;
