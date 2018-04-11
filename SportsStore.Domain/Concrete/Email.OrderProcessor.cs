@@ -8,8 +8,7 @@ namespace SportsStore.Domain.Concrete
 {
     public class EmailSettings
     {
-        public string FileLocation = @"C:\sports_store_emails";
-        public string MailToAddress = " orders@example.com ";
+        public string MailToAddress = "orders@example.com ";
         public string MailFromAddress = "sportsstore@example.com";
         public string Username = "MySmtpUsername";
         public string Password = "MySmtpPassword";
@@ -17,6 +16,7 @@ namespace SportsStore.Domain.Concrete
         public bool WriteAsFile = true;
         public bool UseSsl = true;
         public int ServerPort = 587;
+        public string FileLocation = @"C:\sports_store_emails";
     }
 
     public class EmailOrderProcessor : IOrderProcessor
